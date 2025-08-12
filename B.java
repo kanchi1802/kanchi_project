@@ -1,16 +1,12 @@
-public class test1{
+import java.util.Scanner;
+
+public class Main{
 	public static void main(String[] args){
-		if(args.length!=2){
-			System.out.println("please provide only two numbers");
-			return;
-		}
-		try{
-			int num1 = Integer.parseInt(args[0]);
-			int num2 = Integer.parseInt(args[1]);
-			int sum = num1+num2;
-			System.out.println("the sum of the provided two numbers is: "+sum);
-		}catch(NumberFormatException e){
-			System.out.println("invalid input");
-		}
+		Scanner scanner = new Scanner(System.in);
+		int input1 = scanner.nextInt();
+        char input2 = scanner.next().charAt(0);
+		scanner.nextLine();
+		String input3 = scanner.nextLine();
+		System.out.println("You entered:\n" + input1 +"\n"+input2 +"\n"+ input3);
 	}
 }
